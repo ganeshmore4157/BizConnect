@@ -1,4 +1,5 @@
 import 'package:bizconnect/BottomNavigationBar/ScrollableCards.dart';
+import 'package:bizconnect/IconFunction/LeadForm.dart';
 import 'package:bizconnect/IconFunction/LeaveForm.dart';
 import 'package:bizconnect/IconFunction/holidayList.dart';
 import 'package:bizconnect/IconFunction/mytask.dart';
@@ -7,6 +8,7 @@ import 'package:bizconnect/ImageIcon/UserInfo.dart';
 import 'package:bizconnect/ImageIcon/feed.dart';
 import 'package:bizconnect/ImageIcon/leadcard.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomePageBottom extends StatelessWidget {
   @override
@@ -55,7 +57,7 @@ class _MyHomePageState extends State<HomePageBottomPage> {
                     'https://cdn3.iconfinder.com/data/icons/leto-user-group/64/__user_person_profile-64.png',
                     'Lead',
                     context,
-                    AnotherNewPage(),
+                    LeadForm(),
                   ),
                   buildIconWithText(
                     'https://cdn0.iconfinder.com/data/icons/leto-survey-rating/64/__laptop_online_survey_checkmark_select-64.png',
@@ -81,7 +83,7 @@ class _MyHomePageState extends State<HomePageBottomPage> {
                     'https://cdn0.iconfinder.com/data/icons/leto-ui-generic-1/64/leto-04-64.png',
                     'Profile',
                     context,
-                    UserInfoContainer(),
+                    NewPage(),
                   ),
                   buildIconWithText(
                     'https://cdn1.iconfinder.com/data/icons/leto-travel-vacation/64/__airport_plane_travel-64.png',
@@ -127,7 +129,7 @@ class _MyHomePageState extends State<HomePageBottomPage> {
           ),
         ),
         SizedBox(height: 8),
-        Text(text),
+        Text(text,style: GoogleFonts.lato(fontWeight: FontWeight.bold),),
       ],
     );
   }

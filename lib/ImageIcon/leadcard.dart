@@ -31,7 +31,7 @@ class TaskCard extends StatelessWidget {
               ),
               child: Center(
                 child: Icon(
-                  Icons.leaderboard_sharp,
+                  Icons.online_prediction_sharp,
                   color: Colors.white,
                 ),
               ),
@@ -45,11 +45,9 @@ class TaskCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                      Text(
                       taskName,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: GoogleFonts.lato(fontWeight: FontWeight.bold)                  
                     ),
                     Text(
                       'Mob:-987654321',

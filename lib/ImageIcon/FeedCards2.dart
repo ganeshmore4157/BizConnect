@@ -47,11 +47,9 @@ class TaskCard extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                    Text(
                         taskName,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                        style:GoogleFonts.lato( fontWeight: FontWeight.bold,fontSize: 17,color: Colors.black)
                       ),
                       Text(
                         'Sprint Demo Schedule for Tomorrow 10-Jun (Sat)\n'
@@ -99,11 +97,12 @@ class FeedCardContainer3 extends StatelessWidget {
         title: Text(
           'Feed',
           style: GoogleFonts.lato(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
+            fontSize: 25,
+            fontWeight: FontWeight.bold,color: Colors.white,
           ),
         ),
         backgroundColor: Color.fromARGB(255, 108, 185, 248),
+        iconTheme: IconThemeData(color: Colors.white),
       ),
       body: Container(
         padding: EdgeInsets.all(15.0),

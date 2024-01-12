@@ -47,11 +47,9 @@ class MyProject extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      taskName,
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
+                        taskName,
+                        style:GoogleFonts.lato( fontWeight: FontWeight.bold,fontSize: 17,color: Colors.black)
                       ),
-                    ),
                     const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -134,11 +132,12 @@ class MyTask extends StatelessWidget {
         title: Text(
           'Task',
           style: GoogleFonts.lato(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
+            fontSize: 25,
+            fontWeight: FontWeight.bold,color: Colors.white,
           ),
         ),
           backgroundColor: Color.fromARGB(255, 108, 185, 248),
+          iconTheme: IconThemeData(color: Colors.white), 
       ),
       body: Column(
         children: [

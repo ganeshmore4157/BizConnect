@@ -52,22 +52,18 @@ class MyProject extends StatelessWidget {
                   children: [
                     Text(
                       taskName,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    Text('SOFTWARE | PRIVATE'),
+                      style:GoogleFonts.lato(fontWeight: FontWeight.bold,fontSize: 19)),
+                    Text('SOFTWARE | PRIVATE',style:GoogleFonts.lato(fontWeight: FontWeight.bold,fontSize: 12,color: Colors.grey) ,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           'Start Date:8-1-2024',
-                          style: TextStyle(
-                            color: Colors.orange,
-                          ),
+                          style:GoogleFonts.lato(fontSize: 13,color: Colors.orange)
                         ),
                       ],
                     ),
+                    SizedBox(height: 5,),
                      Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
@@ -121,50 +117,14 @@ class Myproject extends StatelessWidget {
         title: Text(
           'Project List',
           style: GoogleFonts.lato(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
+            fontSize: 25,
+            fontWeight: FontWeight.bold,color:Colors.white,
           ),
         ),
         backgroundColor: Color.fromARGB(255, 108, 185, 248),
       ),
       body: Column(
         children: [
-         /* SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                TextButton(
-                  onPressed: () {
-                    // Handle top button press
-                    print('Top Button Pressed');
-                  },
-                  child: Text('All'),
-                ),
-                TextButton(
-                  onPressed: () {
-                    // Handle bottom button press
-                    print('Bottom Button Pressed');
-                  },
-                  child: Text('Today'),
-                ),
-                TextButton(
-                  onPressed: () {
-                    // Handle bottom button press
-                    print('Bottom Button Pressed');
-                  },
-                  child: Text('Tomorrow'),
-                ),
-                TextButton(
-                  onPressed: () {
-                    // Handle bottom button press
-                    print('Bottom Button Pressed');
-                  },
-                  child: Text('This Month'),
-                ),
-              ],
-            ),
-          ),      */
           Expanded(
             child: SingleChildScrollView(
               child: Column(
@@ -176,26 +136,26 @@ class Myproject extends StatelessWidget {
                     children: [
                       MyProject('BizConnect_V1',
                       'Open',
-                      Colors.green,
+                      Colors.red,
                       ),
                       MyProject('Rentomed',
-                      'Close',
-                      Colors.red,
+                      'Closed',
+                      Colors.green,
                       ),
                       MyProject('USMS',
                       'Open',
-                      Colors.green,
+                      Colors.red,
                       ),
                       MyProject('ECOM Platform',
-                      'Close',
-                      Colors.red),
+                      'Closed',
+                      Colors.green),
                       MyProject('Razorcrest Website',
                       'Open',
-                      Colors.green,
+                      Colors.red,
                       ),
                       MyProject('ShamKanti Website',
                       'Open',
-                      Colors.green
+                      Colors.red
                       ),
                     ],
                   ),
@@ -208,3 +168,4 @@ class Myproject extends StatelessWidget {
     );
   }
 }
+

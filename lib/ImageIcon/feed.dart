@@ -49,9 +49,7 @@ class TaskCard extends StatelessWidget {
                   children: [
                     Text(
                       taskName,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                      ),
+                      style: GoogleFonts.lato(fontWeight: FontWeight.bold)                  
                     ),
                     Text(
                       'Good News all of you we',
@@ -147,9 +145,9 @@ class FeedCardContainer extends StatelessWidget {
             scrollDirection: Axis.horizontal,
             child: Row(
               children: [
-                TaskCard('Mukesh DeshMukh'),
+                TaskCard('Mukesh Deshmukh'),
                 TaskCard('Mukesh More'),
-                 TaskCard('Mukesh DeshMukh'),
+                 TaskCard('Mukesh Deshmukh'),
                 TaskCard('Mukesh More'),
               ],
             ),

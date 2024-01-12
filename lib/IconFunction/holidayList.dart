@@ -5,17 +5,19 @@ class Holiday extends StatelessWidget {
   final String taskName;
   final String buttonText1;
   final Color buttonColor1;
+   final TextStyle buttonTextStyle1;
+    final String buttonTextStyle2;
   //final String buttonText2;
   //final Color buttonColor2;
 
-  Holiday(this.taskName, this.buttonText1, this.buttonColor1);
+  Holiday(this.taskName, this.buttonText1, this.buttonColor1,this.buttonTextStyle1,this.buttonTextStyle2);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.fromLTRB(10, 0, 10, 0),
-      width: 360.0,
-      height:100.0,
+      width: 370.0,
+      height:110.0,
       child: Card(
         clipBehavior: Clip.antiAlias,
         shape: RoundedRectangleBorder(
@@ -42,53 +44,35 @@ class Holiday extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Text(
-                      taskName,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
+                   Text(
+                        taskName,
+                        style:GoogleFonts.lato( fontWeight: FontWeight.bold,fontSize: 16,color: Colors.black)
                       ),
-                    ),
+                       Text(
+                           buttonTextStyle2,
+                           style: GoogleFonts.lato(height: 2,fontWeight: FontWeight.bold,color: Colors.grey,fontSize: 13),
+                        ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         TextButton(
                           onPressed: () {},
-                          style: ButtonStyle(
-                            backgroundColor: MaterialStateProperty.all<Color>(buttonColor1),
-                              fixedSize: MaterialStateProperty.all<Size>(
-                               Size(100,0),
-                            ),
-                          ),
-                          child: Text(buttonText1, style: TextStyle(color: Colors.white)),
+                          
+                          child: Text(buttonText1,style:buttonTextStyle1),
                         ),
-                        SizedBox(width: 20),
-                        // ElevatedButton(
-                        //   onPressed: () {},
-                        //   style: ElevatedButton.styleFrom(
-                        //     primary: buttonColor2,
-                        //   ),
-                        //   child: Text(buttonText2, style: TextStyle(color: Colors.white)),
-                        // ),
+
                       ],
                     ),
                   ],
                 ),
               ),
             ),
-           
-              // child: Center(
-              //   child: Icon(
-                
-              //     size: 15.0,
-              //     color: Colors.white,
-              //   ),
-              // ),
-            
           ],
         ),
       ),
     );
   }
+  
 }
 
 class HolidayList extends StatelessWidget {
@@ -99,11 +83,12 @@ class HolidayList extends StatelessWidget {
         title: Text(
           'Holiday List',
           style: GoogleFonts.lato(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
+            fontSize: 25,
+            fontWeight: FontWeight.bold,color: Colors.white,
           ),
         ),
         backgroundColor: Color.fromARGB(255, 108, 185, 248),
+        iconTheme: IconThemeData(color: Colors.white),
       ),
       body: Column(
         children: [
@@ -117,52 +102,60 @@ class HolidayList extends StatelessWidget {
                   Column(
                     children: [
                       Holiday(
-                        '   Jan 26, 2024 \n '
-                        '  Republic Day | Public',
+                        '   Jan 26, 2024',
                         'COMPULSORY',
-                        Colors.pink.shade200
+                        Colors.white,
+                         TextStyle(color: Colors.pink),
+                         '   Republic Day | PUBLIC'
                       ),
                       Holiday(
-                        '	  Mar 25, 2024 \n'
-                        '   Holi | PUBLIC',
+                        '	  Mar 25, 2024',
                         'COMPULSORY',
-                        Colors.pink.shade200
+                        Colors.white,
+                        TextStyle(color: Colors.pink),
+                        '   Holi | PUBLIC'
                       ),
                        Holiday(
-                        '	  Mar 29, 2024 \n'
-                        '   Good Friday |	GENERAL',
+                        '	  Mar 29, 2024',
                         '	OPTIONAL',
-                        Colors.blue
+                        Colors.white,
+                        TextStyle(color: Colors.blue),
+                        '   Good Friday |	GENERAL'
                       ),
                          Holiday(
-                        '	  Apr 9, 2024 \n'
-                        '   Gudi Padwa | PUBLIC',
+                        '	  Apr 9, 2024',
                         'COMPULSORY',
-                        Colors.pink.shade200
+                        Colors.white,
+                        TextStyle(color: Colors.pink),
+                        '   Gudi Padwa | PUBLIC'
                       ),
                          Holiday(
-                        '	  Apr 11, 2024 \n'
-                        '   Eid al-Fitr (Ramadan) | PUBLIC',
+                        '	  Apr 11, 2024',
                         'COMPULSORY',
-                        Colors.pink.shade200
+                        Colors.white,
+                        TextStyle(color: Colors.pink),
+                        '   Eid al-Fitr (Ramadan) | PUBLIC'
                       ),
                          Holiday(
-                        '	  May 1, 2024 \n'
-                        '   Maharashtra Day / Workers day | PUBLIC',
+                        '	  May 1, 2024',
                         'COMPULSORY',
-                        Colors.pink.shade200
+                        Colors.white,
+                        TextStyle(color: Colors.pink),
+                        '   Maharashtra Day / Workers day | PUBLIC'
                       ),
                         Holiday(
-                        '	  Jun 17, 2024 \n'
-                        '   Eld-ul-Zuha (Bakrid) |	GENERAL',
+                        '	  Jun 17, 2024',
                         '	OPTIONAL',
-                        Colors.blue
+                        Colors.white,
+                        TextStyle(color: Colors.blue),
+                        '   Eld-ul-Zuha (Bakrid) |	GENERAL'
                       ),
                          Holiday(
-                        '	  Jun 17, 2024 \n'
-                        '   Muharram |	GENERAL',
+                        '	  Jun 17, 2024',
                         '	OPTIONAL',
-                        Colors.blue
+                        Colors.white,
+                        TextStyle(color: Colors.blue),
+                        '   Muharram |	GENERAL'
                       ),
                     
                     

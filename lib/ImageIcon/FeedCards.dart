@@ -10,8 +10,8 @@ class TaskCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.fromLTRB(10, 0, 0, 10),
-      width: 410.0,
-      height: 220.0,
+      width: 420.0,
+      height: 255.0,
       child: Card(
         clipBehavior: Clip.antiAlias,
         shape: RoundedRectangleBorder(
@@ -49,21 +49,20 @@ class TaskCard extends StatelessWidget {
                     children: [
                       Text(
                         taskName,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                        style:GoogleFonts.lato( fontWeight: FontWeight.bold,fontSize: 17,color: Colors.black)
                       ),
+                    
                       Text(
-                        'Sprint Demo Schedule for Tomorrow 10-Jun (Sat)\n'
+                        'Sprint Demo Schedule for Tomorrow 10\n'
                         'KrushServ Team : 03:30 PM - 04:00 PM\n'
                         'Rentomed Team : 04:00 PM - 04:30 PM\n'
                         'Agrolist Team : 04:30 PM - 05:00 PM\n'
                         'TME Team : 05:00 PM - 05:30 PM\n'
                         'Google Meet Link : https://meet.google.com/aki-snjc',
-                        style: GoogleFonts.lato(color: Color.fromARGB(255, 41, 39, 39), fontSize: 14),
+                        style: GoogleFonts.lato(color: Color.fromARGB(255, 41, 39, 39), fontSize: 14,height:2),
                       ),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           Icon(
                             Icons.watch_later_outlined,
@@ -71,7 +70,7 @@ class TaskCard extends StatelessWidget {
                             size: 14,
                           ),
                           Text(
-                            '8-1-2024                                                    ',
+                            ' 8-1-2024   ',
                             style: TextStyle(
                               color: Colors.grey,
                               fontSize: 13,
@@ -99,11 +98,12 @@ class FeedCardContainer2 extends StatelessWidget {
         title: Text(
           'Feed',
           style: GoogleFonts.lato(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
+            fontSize: 25,
+            fontWeight: FontWeight.bold,color: Colors.white
           ),
         ),
         backgroundColor: Color.fromARGB(255, 108, 185, 248),
+        iconTheme: IconThemeData(color: Colors.white),
       ),
       body: Container(
         padding: EdgeInsets.all(15.0),
@@ -113,9 +113,9 @@ class FeedCardContainer2 extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              TaskCard('Mukesh Deshmukh'),
+              TaskCard('Mukesh'),
               TaskCard('Mukesh More'),
-              TaskCard('Mukesh DeshMukh'),
+              TaskCard('Mukesh Deshmukh'),
               TaskCard('Mukesh More'),
             ],
           ),

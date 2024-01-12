@@ -1,4 +1,4 @@
-import 'package:bizconnect/BottomNavigationBar/button.dart';
+import 'package:bizconnect/IconFunction/mytask.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -37,9 +37,10 @@ class _MyTaskFormState extends State<MyTaskForm> {
         title: Text(
           'Task Details',
           textAlign: TextAlign.center,
-          style:GoogleFonts.lato(fontSize: 22, color: Colors.black,fontWeight:FontWeight.bold),
+          style:GoogleFonts.lato(fontSize: 25, color: Colors.white,fontWeight:FontWeight.bold),
         ),
       backgroundColor: Color.fromARGB(255, 108, 185, 248),
+      iconTheme:IconThemeData(color: Colors.white)
       ),
       body: Container(
         padding: const EdgeInsets.all(20),
@@ -288,7 +289,7 @@ class _MyTaskFormState extends State<MyTaskForm> {
               TextFormField(
                  decoration: const InputDecoration(
                   border: OutlineInputBorder(),
-                  hintText: 'Select Status',
+                  hintText: 'Estimate Time(hrs)',
                   contentPadding:
                       EdgeInsets.symmetric(vertical: 10, horizontal: 12),
                   isDense: true,
@@ -369,8 +370,8 @@ class _MyTaskFormState extends State<MyTaskForm> {
                       borderRadius: BorderRadius.circular(9),
                       gradient: LinearGradient(
                         colors: [
-                          Color.fromRGBO(64, 72, 235, 0.6),
-                          Color.fromRGBO(5, 13, 158, 1),
+                          Colors.blue.shade200,
+                          Colors.blue.shade500,
                         ],
                         begin: FractionalOffset.centerLeft,
                         end: FractionalOffset.centerRight,
@@ -390,8 +391,8 @@ class _MyTaskFormState extends State<MyTaskForm> {
                         },
                         child: const Padding(
                           padding: EdgeInsets.symmetric(
-                            vertical: 9.0,
-                            horizontal: 25.0,
+                            vertical: 5.0,
+                            horizontal: 18.0,
                           ),
                           child: const Text(
                             'Submit',
@@ -411,8 +412,8 @@ class _MyTaskFormState extends State<MyTaskForm> {
                       borderRadius: BorderRadius.circular(9),
                       gradient: LinearGradient(
                         colors: [
-                          Color.fromARGB(255, 206, 194, 193),
-                          Colors.red,
+                          Colors.red.shade200,
+                          Colors.red.shade500,
                         ],
                         begin: FractionalOffset.centerLeft,
                         end: FractionalOffset.centerRight,
@@ -426,8 +427,8 @@ class _MyTaskFormState extends State<MyTaskForm> {
                         },
                         child: const Padding(
                           padding: EdgeInsets.symmetric(
-                            vertical: 9.0,
-                            horizontal: 25.0,
+                            vertical: 5.0,
+                            horizontal: 18.0,
                           ),
                           child: const Text(
                             'Cancel',
